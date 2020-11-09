@@ -2,8 +2,9 @@ FROM python:3.8-slim-buster AS builder
 
 RUN apt-get update \
     && apt-get install -y wget ca-certificates gnupg2 \
-    && wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
-    && echo "deb http://apt.llvm.org/buster/ llvm-toolchain-buster-11 main" >> /etc/apt/sources.list \
+    && wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
+
+RUN echo "deb http://apt.llvm.org/buster/ llvm-toolchain-buster-11 main" >> /etc/apt/sources.list \
     && echo "deb-src http://apt.llvm.org/buster/ llvm-toolchain-buster-11 main" >> /etc/apt/sources.list \
     && apt-get update
 
