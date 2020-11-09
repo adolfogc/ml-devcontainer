@@ -8,7 +8,7 @@ RUN echo "deb http://apt.llvm.org/buster/ llvm-toolchain-buster-11 main" >> /etc
     && echo "deb-src http://apt.llvm.org/buster/ llvm-toolchain-buster-11 main" >> /etc/apt/sources.list \
     && apt-get update
 
-RUN apt-get install -y remake git tar pkg-config gfortran \
+RUN apt-get install -y make remake git tar pkg-config gfortran \
         clang-11 clang-tools-11 \
         libclang-common-11-dev libclang-11-dev libclang1-11 \
         clang-format-11 clangd-11 \
