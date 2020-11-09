@@ -40,7 +40,7 @@ RUN cd /tmp \
     && rm -rf ./*
 
 RUN cd /tmp \
-    && wget https://downloads.sourceforge.net/project/boost/boost/1.74.0/boost_1_74_0.tar.bz2?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fboost%2Ffiles%2Fboost%2F1.74.0%2Fboost_1_74_0.tar.bz2%2Fdownload&ts=1604952973 \
+    && wget https://downloads.sourceforge.net/project/boost/boost/1.74.0/boost_1_74_0.tar.bz2 \
     && tar -xf boost_1_74_0.tar.bz2 \
     && cd /tmp/boost_1_74_0 \
     && CXX=clang++ ./bootstrap.sh --with-toolset=clang --prefix=/usr/local -with-icu --show-libraries \
